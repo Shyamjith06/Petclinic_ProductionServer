@@ -11,6 +11,6 @@
   command: rm -rf {{ ROOT_FO_PATH }}
 
 - name: Copy DevOps Project War Files
-  copy: src=templates/apps{{ warfile }} dest={{ tomcat_path }}/webapps/ROOT.war mode=0644
+  copy: src=templates/apps/{{ warfile }} dest={{ tomcat_path }}/webapps/ROOT.war mode=0644
   notify: 
   - Restart Tomcat
