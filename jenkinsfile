@@ -7,7 +7,7 @@ node {
         def downloadSpec = """{
             "files": [{
             "pattern": "petclinic-1/petclinic.war",
-            "target": "ansible/templates/app/" }]
+            "target": "ansible/templates/apps/" }]
         }"""
     server.download(downloadSpec)  
   sh label: 'Jenkins', script: "echo '<h1> TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>' > ansible/templates/app/index.html"
