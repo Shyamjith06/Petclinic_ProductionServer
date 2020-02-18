@@ -3,6 +3,7 @@
 - hosts: all
   become: yes
   become_method: sudo
+<<<<<<< HEAD
   tasks:
   - name: Install Apache2 Packages 
     apt:  name=apache2 state=present
@@ -35,3 +36,7 @@
   handlers:
   - name: Restart Tomcat
     shell: "nohup sh /opt/SP/apps/tomcat/bin/catalina.sh start"
+=======
+  roles:
+    - common
+>>>>>>> d1a45f8b247a624eaca83d1a31afa4b0cbd79180
